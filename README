@@ -1,0 +1,21 @@
+Instrucciones de uso GIT:
+
+1-  instalar git
+2-  git config --global user.name "MyName"
+3-  git config --global user.email mi@email.com
+4-  mkdir ruta/al/directorio/de/trabajo
+5-  cd directorio/de/trabajo
+6-  git clone git@github.com:gnomehost/Skaeda-webpage.git
+
+
+Para publicar commits:
+
+7-  git add files* (si es necesario)
+8-  git commit -m 'comentario del commit'
+9-  git remote add origin git@github.com:gnomehost/Skaeda-webpage.git
+10- git push -u origin master
+
+
+Para actualizar el repositorio:
+
+11- git pull git@github.com:gnomehost/Skaeda-webpage.git
