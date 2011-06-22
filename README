@@ -1,21 +1,30 @@
-Instrucciones de uso GIT:
+Instrucciones de uso GitHub:
 
-1-  instalar git
-2-  git config --global user.name "MyName"
-3-  git config --global user.email mi@email.com
-4-  mkdir ruta/al/directorio/de/trabajo
-5-  cd directorio/de/trabajo
-6-  git clone git@github.com:gnomehost/Skaeda-webpage.git
+  Configuración global
+    1-  instalar git
+    2-  git config --global user.name "YourFullName"
+    3-  git config --global user.email your@email.com
+
+  Descargar repositorio remoto
+    4-  cd directorio/de/trabajo
+    5-  git clone git@github.com:Flexible-User-Experience/Skaeda-webpage.git
+
+  Editar repositorio local
+    6-  (crear/editar archivos)
+    7-  git add <archivos>
+    8-  (eliminar archivos)
+    9-  git rm <archivos>
+    10- git commit -m 'Comentario del commit'
+
+  Subir cambios al repositorio remoto
+    11- git push origin <rama-local> (típicamente 'master')
+
+  Bajar cambios del repositorio remoto al local (sólo si es necesario)
+    12- git pull git@github.com:Flexible-User-Experience/Skaeda-webpage.git
 
 
-Para publicar commits:
-
-7-  git add files* (si es necesario)
-8-  git commit -m 'comentario del commit'
-9-  git remote add origin git@github.com:gnomehost/Skaeda-webpage.git
-10- git push -u origin master
 
 
-Para actualizar el repositorio:
+Más sobre Git:
 
-11- git pull git@github.com:gnomehost/Skaeda-webpage.git
+  http://gitref.org
