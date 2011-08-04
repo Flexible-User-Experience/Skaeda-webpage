@@ -1,0 +1,146 @@
+{strip}<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+{* <!--Com funciona:
+	De base.conf s'agafa la configuració el nom de plantilla del cos de pàgina a mostrar  i els menus i submenus que s'han de veure i estar actius segons $pag_section, que és una variable que ens ha passat el php actiu.
+	De $_diccionari, que és una variable generada amb codi idioma + .conf s'agafen les variables genèriques o més usuals [generics] i les corresponents a cada seccio ($pag_section)
+	-->
+*}
+{assign var=_diccionari value=$infopag.idioma|cat:'.conf'}
+{config_load file=$_diccionari section='generics'}
+{config_load file=$_diccionari section=$infopag.subseccio}
+{config_load file='base.conf' section=$infopag.subseccio}
+{if #OPT_PARENT#}
+	{config_load file=$_diccionari section=#OPT_PARENT#}
+{/if}
+{assign var='pagina' value=$transpag[$infopag.idioma]}
+{assign var='_wr' value=$infopag._wr|coalesce:#_wr#:'/'}
+{assign var='_uwr' value=$infopag._uwr|coalesce:#_wr#:'/'}
+{assign var='smart_conts' value=`$infopag.subseccio`.html}
+
+
+{/strip}
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="{$infopag.idioma}" lang="{$infopag.idioma}">
+<head>
+  		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link type="image/x-icon" href="{$_wr}favicon.ico" rel="icon" />
+		<link type="image/x-icon" href="{$_wr}favicon.ico" rel="shortcut icon" />
+		<meta name="Description" content="{#DESCRIPCIO#}" />
+		<meta name="keywords" content="{#PARAULESCLAU#}" />
+		<meta name="robots" content="all" />
+		<link href="{$_wr}css/general.css" rel="stylesheet" type="text/css" />
+
+<title>{#TITLE#|default:#TITOL#}{$infopag.titol_pag|separatxt}{#TITLE_CUA#|separatxt:'. '}</title>
+</head>
+	<body class="lang_{$infopag.idioma} {foreach from=$infopag.tree key=k item=i}sec-{$k} {/foreach}">
+
+	<div id="capcelera">
+		<div class="constrictor clearfix">
+			<h1 class="cap_logo">
+				<a href="{$_wr}{$pagina.inici}">
+					<span class="notext">SKAEDA</span>
+				</a>
+			</h1>
+
+			<div id="capcelera_menu">
+				<ul class="menu_h menu_nav">
+					<li {$infopag.tree.sup_tour|istrue:#_CLASSACT#}><a href="{$_wr}{$pagina.general_behavior}">{#NAVS_TOUR#}</a></li>
+					<li {$infopag.tree.sup_features|istrue:#_CLASSACT#} ><a href="{$_wr}{$pagina.overview}">{#NAVS_FEATURES#}</a></li>
+					<li {$infopag.tree.sup_pricing|istrue:#_CLASSACT#}><a href="{$_wr}{$pagina.pricing}">{#NAVS_PRICING#}</a></li>
+					<li {$infopag.tree.sup_support|istrue:#_CLASSACT#}><a href="{$_wr}{$pagina.faqs}">{#NAVS_SUPPORT#}</a></li>
+				</ul>
+				
+				<ul class="menu_h menu_nav2">
+					<li class="login">
+						<a href="{$_wr}{$pagina.login}"><span class="notext">{#LOGIN#}</span></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		{if #OPT_SUBMENU#}
+		<div id="capcelera_submenu">
+			<div class="constrictor clearfix">
+				{include file='submenus_top.html'}
+			</div>
+		</div>
+		{/if}
+	</div>
+	<div id="main">
+		<div class="constrictor clearfix">
+			<div id="conts">
+			{*cos de la pàgina*}
+			{include file=#OPT_PAG_CONTS#|istrue:'_self_':$smart_conts}
+			</div>
+		</div>
+	</div>
+	<div id="peu">
+		<div class="constrictor clearfix">
+			<p id="peu_signup" class="notext">
+				<span>Sign up in 60 seconds and choose your plan later</span>
+				<a href="#"><span>Try it for free</span></a>
+			</p>
+
+			<div class="llista_links">
+				<dl>
+					<dt>{#PEU_PRODUCT#}</dt>
+					<dd> <a href="{$_wr}{$pagina.inici}" >{#PEU_HOME#}</a>  </dd>
+					<dd> <a href="{$_wr}{$pagina.general_behavior}" >{#PEU_TOUR#}</a> </dd>
+					<dd> <a href="{$_wr}{$pagina.overview}" >{#PEU_FEATURES#}</a>  </dd>
+				</dl>
+
+				<dl>
+					<dt>{#PEU_SUPPORT#}</dt>
+					<dd> <a href="{$_wr}{$pagina.forum}" >{#PEU_FORUM#}</a>  </dd>
+					<dd> <a href="{$_wr}{$pagina.developpers}" >{#PEU_DEVELOPERS#}</a> </dd>
+					<dd> <a href="{$_wr}{$pagina.faqs}" >{#PEU_HELPCENTER#}</a>  </dd>
+				</dl>
+
+				<dl>
+					<dt>{#PEU_COMPANY#}</dt>
+					<dd> <a href="{$_wr}{$pagina.press}" >{#PEU_PRESS#}</a>  </dd>	
+					<dd> <a href="{$_wr}{$pagina.about}" >{#PEU_SOBRE_EMPRESA#}</a></dd>
+					<dd> <a href="{$_wr}{$pagina.contact}" >{#PEU_CONTACTE#}</a> </dd>
+				</dl>
+
+
+				<dl>
+					<dt>{#PEU_NETWORK#}</dt>
+					<dd> <a href="{$_wr}{$pagina.blog}" >{#PEU_BLOG#} </a> </dd>
+					<dd> <a href="#" >{#PEU_TWITTER#}</a>  </dd>
+					<dd> <a href="#" >{#PEU_FACEBOOK#}</a>  </dd>
+				</dl>
+
+				<dl>
+					<dt>{#PEU_MORE#}</dt>
+					<dd> <a href="{$_wr}{$pagina.segurity}" >{#PEU_SEGURITAT#}</a>  </dd>
+					<dd> <a href="{$_wr}{$pagina.privacy_policy}" >{#PEU_PRIVACIDAD#}</a>  </dd>
+					<dd> <a href="{$_wr}{$pagina.terms_service}" >{#PEU_SERVICIO#}</a>  </dd>
+				</dl>
+			</div>
+			<div id="peu_extres">
+				<div  class="lang_select">
+					<select name="idiomes">
+						<option value="en" {$infopag.idioma|choice:'en':#_FRSEL#}>{#ENGLISH#}</option>	
+						<option value="ca" {$infopag.idioma|choice:'ca':#_FRSEL#}>{#CATALA#}</option>	
+						<option value="es" {$infopag.idioma|choice:'es':#_FRSEL#}>{#ESPANOL#}</option>				
+					</select>
+				</div>
+			{*
+				<form id="frm_idiomes" action='{$_wr}{$pagina.inici}' method="post" >	
+				<div>
+					<select name="idiomes">
+						<option value="en" {$infopag.idioma|choice:'en':#_FRSEL#}>{#ENGLISH#}</option>	
+						<option value="ca" {$infopag.idioma|choice:'ca':#_FRSEL#}>{#CATALA#}</option>	
+						<option value="es" {$infopag.idioma|choice:'es':#_FRSEL#}>{#ESPANOL#}</option>				
+					</select>
+					<input type="submit" value="enviar" name="accio" />
+				</div>
+				</form>*}
+				<a href="#" class="logo_peu_dreta notext"><span>Flux</span></a>
+			</div>
+		</div>
+	</div>
+
+
+
+
+</body>
+</html>

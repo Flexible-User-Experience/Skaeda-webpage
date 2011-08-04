@@ -1,0 +1,21 @@
+<div id="conts_menu">
+	<ul class="menu_lat">
+	{if $infopag.tree.sup_tour}
+		<li {$infopag.tree.general_behavior|istrue:#_CLASSACT#}><a href="{$_wr}{$pagina.general_behavior}">{#MENU_GENERAL_BEHAVIOR#} <span>2:15</span></a></li>		
+		<li {$infopag.tree.social_sharing|istrue:#_CLASSACT#}><a href="{$_wr}{$pagina.social_sharing}">{#MENU_SOCIAL_SHARING#} <span>1:25</span></a></li>	
+		<li {$infopag.tree.real_time|istrue:#_CLASSACT#}><a href="{$_wr}{$pagina.real_time}">{#MENU_REAL_TIME#} <span>0:58</span></a></li>	
+		<li {$infopag.tree.import_export|istrue:#_CLASSACT#}><a href="{$_wr}{$pagina.import_export}">{#MENU_IMPORT_EXPORT#} <span>1:47</span></a></li>
+	{elseif $infopag.tree.sup_features}
+		<li {$infopag.tree.overview|istrue:#_CLASSACT#}><a href="{$_wr}{$pagina.overview}">{#MENU_OVERVIEW#}</a></li>
+		<li {$infopag.tree.smart_group|istrue:#_CLASSACT#}><a href="{$_wr}{$pagina.smart_group}">{#MENU_SMART_GROUP#}</a></li>	
+		<li {$infopag.tree.instant_sincronization|istrue:#_CLASSACT#}><a href="{$_wr}{$pagina.instant_sincronization}">{#MENU_INSTANT_SINCRONIZATION#}</a></li>	
+		<li {$infopag.tree.really_search|istrue:#_CLASSACT#}><a href="{$_wr}{$pagina.really_search}">{#MENU_REALLY_SEARCH#}</a></li>	
+		<li {$infopag.tree.imports_exports|istrue:#_CLASSACT#}><a href="{$_wr}{$pagina.imports_exports}">{#MENU_IMPORT_EXPORT#}</a></li>	
+		<li {$infopag.tree.technical_details|istrue:#_CLASSACT#}><a href="{$_wr}{$pagina.technical_details}">{#MENU_TECHNICAL_DETAILS#}</a></li>	
+	{elseif $infopag.tree.sup_support}	
+		<li {$infopag.tree.faqs|istrue:#_CLASSACT#}><a href="{$_wr}{$pagina.faqs}">{#MENU_FAQS#}</a></li>		
+		<li {$infopag.tree.developpers|istrue:#_CLASSACT#}><a href="{$_wr}{$pagina.developpers}">{#MENU_DEVELOPPERS#}</a></li>	
+		<li {$infopag.tree.forum|istrue:#_CLASSACT#}><a href="{$_wr}{$pagina.forum}">{#MENU_FORUM#}</a></li>		
+	{/if}
+	</ul>
+</div>

@@ -1,0 +1,7 @@
+	<ul class="menu_h">
+	{if $infopag.tree.sup_support}	
+		<li {$infopag.tree.faqs|istrue:#_CLASSACT#}><a href="{$_wr}{$pagina.faqs}">{#MENU_FAQS#}</a></li>		
+		<li {$infopag.tree.developpers|istrue:#_CLASSACT#}><a href="{$_wr}{$pagina.developpers}">{#MENU_DEVELOPPERS#}</a></li>	
+		<li {$infopag.tree.forum|istrue:#_CLASSACT#}><a href="{$_wr}{$pagina.forum}">{#MENU_FORUM#}</a></li>		
+	{/if}
+	</ul>
