@@ -21,7 +21,7 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 CREATE DATABASE skaedaweb;
 USE skaedaweb;
 CREATE USER userskaedaweb IDENTIFIED BY '4ndr01d3';
-GRANT ALL PRIVILEGES ON skaedaweb TO userskaedaweb;
+GRANT ALL PRIVILEGES ON skaedaweb.* TO userskaedaweb;
 
 -- --------------------------------------------------------
 
