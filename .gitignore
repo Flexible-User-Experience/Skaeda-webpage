@@ -3,3 +3,5 @@
 web/.tmp*
 .idea
 .idea/*
+.settings
+.settings/*
