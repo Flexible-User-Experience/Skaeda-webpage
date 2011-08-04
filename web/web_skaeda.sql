@@ -18,6 +18,10 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 --
 -- Base de dades: `web_skaeda`
 --
+CREATE DATABASE skaedaweb;
+USE skaedaweb;
+CREATE USER userskaedaweb IDENTIFIED BY '4ndr01d3';
+GRANT ALL PRIVILEGES ON skaedaweb TO userskaedaweb;
 
 -- --------------------------------------------------------
 

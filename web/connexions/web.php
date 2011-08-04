@@ -62,11 +62,11 @@ if (file_exists($config_file))
 	 *------------------------------------------------------------------
 	 */
 	 
-	$conbd_servidor = "##NOM_SERVER##";
-	$conbd_basededades = "##NOM_BD##";
-	$conbd_usuari = "##NOM_USUARI##";
-	$conbd_clau = "##CLAU##";
-	$URL_MARE="http://xxx.com/";
+	$conbd_servidor = "localhost";
+	$conbd_basededades = "skaedaweb";
+	$conbd_usuari = "userskaedaweb";
+	$conbd_clau = "4ndr01d3";
+	$URL_MARE="http://www.skaeda.com/";
 	
 	//------------------------------------------------------------------
 }
