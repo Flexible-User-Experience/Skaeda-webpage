@@ -18,6 +18,7 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 --
 -- Base de dades: `web_skaeda`
 --
+
 CREATE DATABASE skaedaweb;
 USE skaedaweb;
 CREATE USER userskaedaweb IDENTIFIED BY '4ndr01d3';
@@ -244,7 +245,7 @@ CREATE TABLE `v_pags` (
 --
 DROP TABLE IF EXISTS `v_pags`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`taller`@`%` SQL SECURITY DEFINER VIEW `v_pags` AS select `pags`.`pags_id` AS `pags_id`,`pags`.`pags_codi` AS `pags_codi`,`pags`.`pags_parent` AS `pags_parent`,`pags`.`pags__controllers_id` AS `pags__controllers_id`,`pags`.`pags_start` AS `pags_start`,`pags_at`.`pags_at_id` AS `pags_at_id`,`pags_at`.`pags_at__pags_id` AS `pags_at__pags_id`,`pags_at`.`pags_at_idioma` AS `pags_at_idioma`,`pags_at`.`pags_at_text` AS `pags_at_text`,`pags_at`.`pags_at_titol` AS `pags_at_titol`,`pags_at`.`pags_at_codi` AS `pags_at_codi`,`controllers`.`controllers_id` AS `controllers_id`,`controllers`.`controllers_nom` AS `controllers_nom`,`controllers`.`controllers_folder` AS `controllers_folder` from ((`pags` join `pags_at` on((`pags`.`pags_id` = `pags_at`.`pags_at__pags_id`))) join `controllers` on((`pags`.`pags__controllers_id` = `controllers`.`controllers_id`))) order by `pags`.`pags_parent` desc,`pags_at`.`pags_at_codi`;
+CREATE ALGORITHM=UNDEFINED DEFINER=`userskaedaweb`@`%` SQL SECURITY DEFINER VIEW `v_pags` AS select `pags`.`pags_id` AS `pags_id`,`pags`.`pags_codi` AS `pags_codi`,`pags`.`pags_parent` AS `pags_parent`,`pags`.`pags__controllers_id` AS `pags__controllers_id`,`pags`.`pags_start` AS `pags_start`,`pags_at`.`pags_at_id` AS `pags_at_id`,`pags_at`.`pags_at__pags_id` AS `pags_at__pags_id`,`pags_at`.`pags_at_idioma` AS `pags_at_idioma`,`pags_at`.`pags_at_text` AS `pags_at_text`,`pags_at`.`pags_at_titol` AS `pags_at_titol`,`pags_at`.`pags_at_codi` AS `pags_at_codi`,`controllers`.`controllers_id` AS `controllers_id`,`controllers`.`controllers_nom` AS `controllers_nom`,`controllers`.`controllers_folder` AS `controllers_folder` from ((`pags` join `pags_at` on((`pags`.`pags_id` = `pags_at`.`pags_at__pags_id`))) join `controllers` on((`pags`.`pags__controllers_id` = `controllers`.`controllers_id`))) order by `pags`.`pags_parent` desc,`pags_at`.`pags_at_codi`;
 
 --
 -- Restriccions per taules bolcades
