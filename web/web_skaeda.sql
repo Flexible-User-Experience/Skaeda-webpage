@@ -102,7 +102,7 @@ INSERT INTO `pags` (`pags_id`, `pags_codi`, `pags_parent`, `pags__controllers_id
 (203, 'social_tagging',            'sup_features', 3, 0),
 (204, 'bookmark_management',       'sup_features', 3, 0),
 (205, 'quick_search',              'sup_features', 3, 0),
-(206, 'import_export',             'sup_features', 3, 0),
+(206, 'import_and_export',         'sup_features', 3, 0),
 (207, 'bookmarklet',               'sup_features', 3, 0),
 (208, 'instant_sychronization',    'sup_features', 3, 0),
 (209, 'subscriptions_invitations', 'sup_features', 3, 0),
