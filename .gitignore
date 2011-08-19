@@ -6,3 +6,5 @@ web/.tmp*
 .settings
 .settings/*
 .buildpath
+web/templates_c
+web/templates_c/*

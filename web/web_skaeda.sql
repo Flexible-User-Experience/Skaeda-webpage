@@ -32,8 +32,8 @@ GRANT ALL PRIVILEGES ON skaedaweb.* TO userskaedaweb;
 
 CREATE TABLE `controllers` (
   `controllers_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `controllers_nom` varchar(30) DEFAULT NULL COMMENT 'nom del controlador',
-  `controllers_folder` varchar(50) DEFAULT NULL COMMENT 'carpeta on actua el controlador',
+  `controllers_nom` varchar(30) DEFAULT NULL                   COMMENT 'nom del controlador',
+  `controllers_folder` varchar(50) DEFAULT NULL                COMMENT 'carpeta on actua el controlador',
   `controllers__idioma_id` int(10) unsigned DEFAULT NULL,
   PRIMARY KEY (`controllers_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
@@ -42,8 +42,7 @@ CREATE TABLE `controllers` (
 -- Bolcant dades de la taula `controllers`
 --
 
-INSERT INTO `controllers` (`controllers_id`, `controllers_nom`, `controllers_folder`, `controllers__idioma_id`) VALUES
-(3, 'public', 'public', NULL);
+INSERT INTO `controllers` (`controllers_id`, `controllers_nom`, `controllers_folder`, `controllers__idioma_id`) VALUES (3, 'public', 'public', NULL);
 
 -- --------------------------------------------------------
 
@@ -52,9 +51,9 @@ INSERT INTO `controllers` (`controllers_id`, `controllers_nom`, `controllers_fol
 --
 
 CREATE TABLE `idioma` (
-  `idioma_id` smallint(5) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Id de la llengua de l''atribut',
-  `idioma_abr` varchar(5) NOT NULL COMMENT 'Abreviatura de la llengua \r\n(per exemple: ca=català, fr=fran',
-  `idioma_nom` text NOT NULL COMMENT 'Nom de la llengua',
+  `idioma_id` smallint(5) unsigned NOT NULL AUTO_INCREMENT    COMMENT 'Id de la llengua de atribut',
+  `idioma_abr` varchar(5) NOT NULL                            COMMENT 'Abreviatura de la llengua \r\n(per exemple: ca=català, fr=fran',
+  `idioma_nom` text NOT NULL                                  COMMENT 'Nom de la llengua',
   `idioma__estat_id` tinyint(1) unsigned NOT NULL DEFAULT '1' COMMENT 'llengua activada si/no',
   `idioma_ordre` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`idioma_id`,`idioma_abr`)
@@ -65,9 +64,9 @@ CREATE TABLE `idioma` (
 --
 
 INSERT INTO `idioma` (`idioma_id`, `idioma_abr`, `idioma_nom`, `idioma__estat_id`, `idioma_ordre`) VALUES
-(1, 'ca', 'Català', 1, 2),
-(2, 'es', 'Español', 1, 3),
-(3, 'en', 'English', 1, 1),
+(1, 'ca', 'Català',   1, 2),
+(2, 'es', 'Español',  1, 3),
+(3, 'en', 'English',  1, 1),
 (4, 'fr', 'Français', 0, 4);
 
 -- --------------------------------------------------------
@@ -78,10 +77,10 @@ INSERT INTO `idioma` (`idioma_id`, `idioma_abr`, `idioma_nom`, `idioma__estat_id
 
 CREATE TABLE `pags` (
   `pags_id` int(11) NOT NULL AUTO_INCREMENT,
-  `pags_codi` varchar(50) DEFAULT NULL COMMENT 'codi de la pagina (independent de l''idioma)',
-  `pags_parent` varchar(50) DEFAULT NULL COMMENT 'menu principal d''on penja',
-  `pags__controllers_id` int(10) unsigned DEFAULT NULL COMMENT 'controllador al que pertany la pàgina',
-  `pags_start` tinyint(3) unsigned DEFAULT '0' COMMENT 'és la pàgina inicial del controlador?',
+  `pags_codi` varchar(50) DEFAULT NULL                    COMMENT 'codi de la pagina (independent de idioma)',
+  `pags_parent` varchar(50) DEFAULT NULL                  COMMENT 'menu principal d''on penja',
+  `pags__controllers_id` int(10) unsigned DEFAULT NULL    COMMENT 'controllador al que pertany la pàgina',
+  `pags_start` tinyint(3) unsigned DEFAULT '0'            COMMENT 'és la pàgina inicial del controlador?',
   PRIMARY KEY (`pags_id`),
   KEY `pags__controllers_id` (`pags__controllers_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=153 ;
@@ -107,6 +106,7 @@ INSERT INTO `pags` (`pags_id`, `pags_codi`, `pags_parent`, `pags__controllers_id
 (208, 'instant_sychronization',    'sup_features', 3, 0),
 (209, 'subscriptions_invitations', 'sup_features', 3, 0),
 (139, 'pricing', 'sup_pricing', 3, 0),
+(149, 'pricing', 'sup_pricing', 3, 0),
 (140, 'faqs',        'sup_support', 3, 0),
 (141, 'developpers', 'sup_support', 3, 0),
 (142, 'forum',       'sup_support', 3, 0),
@@ -116,10 +116,9 @@ INSERT INTO `pags` (`pags_id`, `pags_codi`, `pags_parent`, `pags__controllers_id
 (146, 'about',   'company', 3, 0),
 (147, 'contact', 'company', 3, 0),
 (148, 'press',   'company', 3, 0),
-(149, 'pricing', 'sup_pricing', 3, 0),
-(150, 'segurity', '', 3, 0),
+(150, 'segurity',       '', 3, 0),
 (151, 'privacy_policy', '', 3, 0),
-(152, 'terms_service', '', 3, 0);
+(152, 'terms_service',  '', 3, 0);
 
 -- --------------------------------------------------------
 
@@ -242,7 +241,7 @@ INSERT INTO `pags_at` (`pags_at_id`, `pags_at__pags_id`, `pags_at_idioma`, `pags
 (803, 152, 'es', NULL, NULL, 'terminos-y-servicio'),
 (813, 150, 'en', NULL, NULL, 'securityy'),
 (814, 150, 'ca', NULL, NULL, 'seguritat'),
-(815, 150, 'es', NULL, NULL, 'seguridad'),
+(815, 150, 'es', NULL, NULL, 'seguridad');
 --	(828, 132, 'en', NULL, NULL, 'overview'),
 --	(829, 132, 'ca', NULL, NULL, 'resum'),
 --	(830, 132, 'es', NULL, NULL, 'resumen'),
