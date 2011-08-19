@@ -1,0 +1,154 @@
+/* Full d'estil CSS*/
+
+/* Elements basics HTML */
+html {
+	margin: 0;
+	padding: 0;
+}
+
+body { 
+	font-family: Arial, "serif";
+	line-height: normal;
+	color: #000000; 
+	background: #80C9FF;
+	margin: 0; 
+	padding: 0;
+	display: block;
+	background:  url(../images/background-body.jpg) repeat-x #F6F6F8;
+}
+
+p { 
+	margin-top: 0; 
+	text-align: justify;
+	font-size: 14px;
+}
+
+a:link, a:visited {
+	color: #666666;
+	font-weight: bold; 
+	text-decoration: none; 
+}
+
+a:active, a:hover {
+	color: #000000;
+	font-weight: bold; 
+	text-decoration: none;
+}
+
+div {
+	border-color: #444444;
+	border-style: solid;
+	border-width: thin;
+	font-size: 12px;
+	margin: -1px auto 0px auto;
+	padding: 10px;
+	position: relative;
+}
+
+
+/* Elements especifics Xtraescena */
+#header {
+	background-color: #FFFFFF;
+	color: #000000;
+	height: 30px;
+	width: 880px;
+}
+
+#sub_header {
+	background-color: #FFFFFF;
+	color: #000000;
+	height: 15px;
+	width: 880px;
+}
+
+#menu_principal {
+	border-style: none;
+	margin: 0px;
+	padding: 0px;
+	float: left;
+}
+
+#menu_principal ul {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+#menu_principal li {
+	font-size: 25px;
+	float: left;
+	margin-right: 70px;
+}
+
+#menu_principal li.actiu a {
+	color: #000000;
+	font-weight: bold; 
+	text-decoration: none;
+	border-bottom: 2px solid #000000;
+}
+
+#menu_secundari {
+	border-style: none;
+	margin: 0px;
+	padding: 0px;
+	float: left;
+}
+
+#menu_secundari ul {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+#menu_secundari li {
+	font-size: 12px;
+	float: left;
+	margin-right: 40px;
+}
+
+#menu_secundari li.actiu a {
+	color: #000000;
+	font-weight: bold; 
+	text-decoration: none;
+	border-bottom: 2px solid #000000;
+}
+
+#main {
+	background-color: #80C9FF;
+	background-image: url(../images/icon.png);
+	background-position-x: center;
+	background-position-y: 90px;
+	background-repeat: no-repeat;
+	color: #FFFFFF;
+	height: 300px;
+	width: 470px;
+	padding: 185px 15px 0px 15px;
+	margin: 25px auto 0px auto;
+}
+
+#main p {
+	color: #000000;
+	text-align: center;
+}
+
+#main h1 {
+	color: #FFFFFF;
+	font-size: 110px;
+	text-align: center;
+}
+
+#footer {
+	color: #000000;
+	background-color: #91DAFF;
+	height: 12px;
+	width: 500px;
+	padding: 7px 0px 7px 0px;
+	text-align: center;
+}
+
+#footer p {
+	color: #000000;
+	text-align: center;
+	font-size: 10px;
+	vertical-align: middle;
+}
