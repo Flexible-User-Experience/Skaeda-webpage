@@ -112,28 +112,13 @@
 			</div>
 			<div id="peu_extres">
 				<div  class="lang_select">
-					<select name="idiomes">
-						<option value="en" {$infopag.idioma|choice:'en':#_FRSEL#}>{#ENGLISH#}</option>
-						<option value="ca" {$infopag.idioma|choice:'ca':#_FRSEL#}>{#CATALA#}</option>
-						<option value="es" {$infopag.idioma|choice:'es':#_FRSEL#}>{#ESPANOL#}</option>
-						<option value="fr" {$infopag.idioma|choice:'es':#_FRSEL#}>{#FRANCAISE#}</option>
-						<option value="it" {$infopag.idioma|choice:'es':#_FRSEL#}>{#ITALIANO#}</option>
+					<select name="idiomes" onchange="self.location=this[this.selectedIndex].value">
+					{foreach from=$idiomes key=codi item=nom name=loop}
+						<option value="{$_wr}{$transpag.$codi.inici}" {$codi|choice:$infopag.idioma:#_FRSEL#}>{$nom}</option>
+					{/foreach}	
 					</select>
 				</div>
-			{*
-				<form id="frm_idiomes" action='{$_wr}{$pagina.inici}' method="post" >	
-				<div>
-					<select name="idiomes">
-						<option value="en" {$infopag.idioma|choice:'en':#_FRSEL#}>{#ENGLISH#}</option>
-						<option value="ca" {$infopag.idioma|choice:'ca':#_FRSEL#}>{#CATALA#}</option>
-						<option value="es" {$infopag.idioma|choice:'es':#_FRSEL#}>{#ESPANOL#}</option>
-						<option value="fr" {$infopag.idioma|choice:'es':#_FRSEL#}>{#FRANCAISE#}</option>	
-						<option value="it" {$infopag.idioma|choice:'es':#_FRSEL#}>{#ITALIANO#}</option>	
-					</select>
-					<input type="submit" value="enviar" name="accio" />
-				</div>
-				</form>*}
-				<a href="http://www.flux.cat" class="logo_peu_dreta notext"><span>Flux</span></a>
+				<a href="http://www.flux.com" class="logo_peu_dreta notext" onclick="window.open(this.href);return false;"><span>Flux</span></a>
 			</div>
 		</div>
 	</div>
