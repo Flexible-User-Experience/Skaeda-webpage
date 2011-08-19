@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-        <link rel="icon" type="image/png" href="./images/favicon.png" />
+        <link rel="shortcut icon" href="favicon.ico" />
         <link href="css/help.css" rel="stylesheet" type="text/css"/>
         <meta name="description" content="Bookmarks management system"/>
         <meta name="keywords" content="bookmark, html5, websocket, manager, link, browser, content, system"/>
@@ -23,42 +23,55 @@
 	</head>
 	<body>
 		<div id="main">
-                <h1>Sk&aelig;da</h1>
+				<div id="logo_img"></div>
+                <h1>help!</h1>
                 <p>
-                	<h4>Browser compatibility</h4>
+                	<h4>Skaeda only support modern web browsers. <br/>Check next table for more details.</h4>
                 	<table>
+                		<thead>
+                			<tr>
+                				<th align='center'>browser</th>
+                				<th align='center'>version</th>
+                				<th align='center'>flash plugin</th>
+                			</tr>
+                		</thead>
                 		<tbody>
 							<tr>
-								<td width='130px'>Internet Explorer</td>
-								<td width='50px'>&#8805; 9</td>
-								<td width='25px'>yes</td>
+								<td width='110px'>Internet Explorer</td>
+								<td width='75px' align='center'>&#8805; 9</td>
+								<td width='50px' align='center'>yes</td>
 							</tr>
 							<tr>
 								<td align='left'>Firefox</td>
-								<td>&#8805; 3</td>
-								<td>yes</td>
+								<td align='center'>&#8805; 3</td>
+								<td align='center'>yes*</td>
 							</tr>
 							<tr>
                                 <td align='left'>Chrome</td>
-								<td>&#8805; 10</td>
-								<td>yes</td>
+								<td align='center'>&#8805; 10</td>
+								<td align='center'>no</td>
                             </tr>
 							<tr>
                                 <td align='left'>Opera</td>
-								<td>&#8805; 10</td>
-								<td>yes</td>
+								<td align='center'>&#8805; 10</td>
+								<td align='center'>yes*</td>
                             </tr>
 							<tr>
                                 <td align='left'>Safari</td>
-								<td>&#8805; 5</td>
-								<td>yes</td>
+								<td align='center'>&#8805; 5</td>
+								<td align='center'>no</td>
                             </tr>
 						</tbody>
                 	</table>
                 </p>
+                <p style="text-align:left;">
+                	* We encourage to active HTML 5 WebSocket tecnology instead of Flash Player.<br/>
+                	Firefox: set 'network.websocket.override-security-block' setting in 'about:config' to true<br/>
+					Opera: set 'enable websockets' setting in 'about:config' to true<br/>
+                </p>
             </div>
             <div id="footer">
-                <p><a href="mailto:info@flux.cat">info@flux.cat</a></p>
+                <p><a href="mailto:info@skaeda.com">info@skaeda.com</a></p>
             </div>
 	</body> 
 </html>

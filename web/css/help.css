@@ -10,11 +10,11 @@ body {
 	font-family: Arial, "serif";
 	line-height: normal;
 	color: #000000; 
-	background: #80C9FF;
+	background: #F2F2F2;
 	margin: 0; 
 	padding: 0;
 	display: block;
-	background:  url(../images/background-body.jpg) repeat-x #F6F6F8;
+	background:  url(img/background-help.jpg) repeat-x #F6F6F8;
 }
 
 p { 
@@ -24,7 +24,7 @@ p {
 }
 
 a:link, a:visited {
-	color: #666666;
+	color: #FFF;
 	font-weight: bold; 
 	text-decoration: none; 
 }
@@ -45,8 +45,6 @@ div {
 	position: relative;
 }
 
-
-/* Elements especifics Xtraescena */
 #header {
 	background-color: #FFFFFF;
 	color: #000000;
@@ -113,17 +111,31 @@ div {
 	border-bottom: 2px solid #000000;
 }
 
+#logo_img {
+	position: relative;
+	height: 31px;
+	width: 192px;
+	margin: 0;
+	padding: 0;
+	background-image: url(img/logo_empresa.png);
+	border: none;
+}
+
 #main {
-	background-color: #80C9FF;
-	background-image: url(../images/icon.png);
-	background-position-x: center;
-	background-position-y: 90px;
-	background-repeat: no-repeat;
+	background-color: #91DAFF;
 	color: #FFFFFF;
 	height: 550px;
 	width: 470px;
-	padding: 185px 15px 0px 15px;
+	padding: 25px 15px 0px 15px;
 	margin: 25px auto 0px auto;
+	border-radius:         9px 9px 0px 0px;
+    -moz-border-radius:    9px 9px 0px 0px;
+    -ms-border-radius:     9px 9px 0px 0px;
+    -webkit-border-radius: 9px 9px 0px 0px;
+    -khtml-border-radius:  9px 9px 0px 0px;
+    -moz-box-shadow:       0px 3px 5px #555;
+    -webkit-box-shadow:    0px 3px 5px #555;
+    box-shadow:            0px 3px 5px #555;
 }
 
 #main p {
@@ -134,12 +146,12 @@ div {
 
 #main h1 {
 	color: #FFFFFF;
-	font-size: 110px;
+	font-size: 70px;
 	text-align: center;
 }
 
 #main h4 {
-    color: #000000;
+    color: #F9F9F9;
     font-size: 16px;
     text-align: center;
 }
@@ -152,17 +164,29 @@ div {
 	margin: 0px auto;
 }
 
-#maint table, td {
+#main table, td {
 	padding: 5px;
+}
+
+#main th {
+	color: #F9F9F9;
 }
 
 #footer {
 	color: #000000;
-	background-color: #91DAFF;
+	background-color: #80C9FF;
 	height: 12px;
 	width: 500px;
 	padding: 7px 0px 7px 0px;
 	text-align: center;
+	border-radius:         0px 0px 9px 9px;
+    -moz-border-radius:    0px 0px 9px 9px;
+    -ms-border-radius:     0px 0px 9px 9px;
+    -webkit-border-radius: 0px 0px 9px 9px;
+    -khtml-border-radius:  0px 0px 9px 9px;
+    -moz-box-shadow:       0px 3px 5px #555;
+    -webkit-box-shadow:    0px 3px 5px #555;
+    box-shadow:            0px 3px 5px #555;
 }
 
 #footer p {
