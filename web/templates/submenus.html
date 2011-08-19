@@ -1,6 +1,10 @@
 <div id="conts_menu">
 	<ul class="menu_lat">
-	{if $infopag.tree.sup_tour}
+	{if $infopag.tree.sup_overview}
+		<li {$infopag.tree.overview|istrue:#_CLASSACT#}><a href="{$_wr}{$pagina.overview}">{#MENU_OVERVIEW_1#}</a></li>
+		<li {$infopag.tree.overview|istrue:#_CLASSACT#}><a href="{$_wr}{$pagina.overview}">{#MENU_OVERVIEW_2#}</a></li>
+		<li {$infopag.tree.overview|istrue:#_CLASSACT#}><a href="{$_wr}{$pagina.overview}">{#MENU_OVERVIEW_3#}</a></li>
+	{elseif $infopag.tree.sup_tour}
 		<li {$infopag.tree.general_behavior|istrue:#_CLASSACT#}><a href="{$_wr}{$pagina.general_behavior}">{#MENU_GENERAL_BEHAVIOR#} <span>2:15</span></a></li>		
 		<li {$infopag.tree.social_sharing|istrue:#_CLASSACT#}><a href="{$_wr}{$pagina.social_sharing}">{#MENU_SOCIAL_SHARING#} <span>1:25</span></a></li>	
 		<li {$infopag.tree.real_time|istrue:#_CLASSACT#}><a href="{$_wr}{$pagina.real_time}">{#MENU_REAL_TIME#} <span>0:58</span></a></li>	

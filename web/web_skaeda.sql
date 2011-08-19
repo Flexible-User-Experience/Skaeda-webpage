@@ -64,11 +64,11 @@ CREATE TABLE `idioma` (
 --
 
 INSERT INTO `idioma` (`idioma_id`, `idioma_abr`, `idioma_nom`, `idioma__estat_id`, `idioma_ordre`) VALUES
-(1, 'ca', 'Català',   1, 2),
-(2, 'es', 'Español',  1, 3),
-(3, 'en', 'English',  1, 1),
-(4, 'fr', 'Français', 1, 4),
-(5, 'it', 'Italiano', 1, 5);
+(1, 'ca', 'Català',    1, 2),
+(2, 'es', 'Español',   1, 3),
+(3, 'en', 'English',   1, 1),
+(4, 'fr', 'Française', 1, 4),
+(5, 'it', 'Italiano',  1, 5);
 
 -- --------------------------------------------------------
 

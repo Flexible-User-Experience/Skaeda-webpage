@@ -327,6 +327,10 @@ ul.menu_h li{
 	position:relative;
 }
 
+/*Imatges submenus Overview*/
+#bloc_llista.bloc_overview{background-image:url(img/fons_decor_overview.jpg);}
+
+/*Imatges submenus Features*/
 #bloc_llista.bloc_what_is_skaeda{background-image:url(img/fons_decor_overview.jpg);}
 #bloc_llista.bloc_general_structure{background-image:url(img/fons_decor_overview.jpg);}
 #bloc_llista.bloc_smart_manual_groups{background-image:url(img/fons_decor_smartgroups.jpg);}
