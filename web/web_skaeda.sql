@@ -32,8 +32,8 @@ GRANT ALL PRIVILEGES ON skaedaweb.* TO userskaedaweb;
 
 CREATE TABLE `controllers` (
   `controllers_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `controllers_nom` varchar(30) DEFAULT NULL COMMENT 'nom del controlador',
-  `controllers_folder` varchar(50) DEFAULT NULL COMMENT 'carpeta on actua el controlador',
+  `controllers_nom` varchar(30) DEFAULT NULL                   COMMENT 'nom del controlador',
+  `controllers_folder` varchar(50) DEFAULT NULL                COMMENT 'carpeta on actua el controlador',
   `controllers__idioma_id` int(10) unsigned DEFAULT NULL,
   PRIMARY KEY (`controllers_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
@@ -42,8 +42,7 @@ CREATE TABLE `controllers` (
 -- Bolcant dades de la taula `controllers`
 --
 
-INSERT INTO `controllers` (`controllers_id`, `controllers_nom`, `controllers_folder`, `controllers__idioma_id`) VALUES
-(3, 'public', 'public', NULL);
+INSERT INTO `controllers` (`controllers_id`, `controllers_nom`, `controllers_folder`, `controllers__idioma_id`) VALUES (3, 'public', 'public', NULL);
 
 -- --------------------------------------------------------
 
@@ -52,9 +51,9 @@ INSERT INTO `controllers` (`controllers_id`, `controllers_nom`, `controllers_fol
 --
 
 CREATE TABLE `idioma` (
-  `idioma_id` smallint(5) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Id de la llengua de l''atribut',
-  `idioma_abr` varchar(5) NOT NULL COMMENT 'Abreviatura de la llengua \r\n(per exemple: ca=català, fr=fran',
-  `idioma_nom` text NOT NULL COMMENT 'Nom de la llengua',
+  `idioma_id` smallint(5) unsigned NOT NULL AUTO_INCREMENT    COMMENT 'Id de la llengua de atribut',
+  `idioma_abr` varchar(5) NOT NULL                            COMMENT 'Abreviatura de la llengua \r\n(per exemple: ca=català, fr=fran',
+  `idioma_nom` text NOT NULL                                  COMMENT 'Nom de la llengua',
   `idioma__estat_id` tinyint(1) unsigned NOT NULL DEFAULT '1' COMMENT 'llengua activada si/no',
   `idioma_ordre` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`idioma_id`,`idioma_abr`)
@@ -65,10 +64,11 @@ CREATE TABLE `idioma` (
 --
 
 INSERT INTO `idioma` (`idioma_id`, `idioma_abr`, `idioma_nom`, `idioma__estat_id`, `idioma_ordre`) VALUES
-(1, 'ca', 'Català', 1, 2),
-(2, 'es', 'Español', 1, 3),
-(3, 'en', 'English', 1, 1),
-(4, 'fr', 'Français', 0, 4);
+(1, 'ca', 'Català',    1, 2),
+(2, 'es', 'Español',   1, 3),
+(3, 'en', 'English',   1, 1),
+(4, 'fr', 'Française', 1, 4),
+(5, 'it', 'Italiano',  1, 5);
 
 -- --------------------------------------------------------
 
@@ -78,10 +78,10 @@ INSERT INTO `idioma` (`idioma_id`, `idioma_abr`, `idioma_nom`, `idioma__estat_id
 
 CREATE TABLE `pags` (
   `pags_id` int(11) NOT NULL AUTO_INCREMENT,
-  `pags_codi` varchar(50) DEFAULT NULL COMMENT 'codi de la pagina (independent de l''idioma)',
-  `pags_parent` varchar(50) DEFAULT NULL COMMENT 'menu principal d''on penja',
-  `pags__controllers_id` int(10) unsigned DEFAULT NULL COMMENT 'controllador al que pertany la pàgina',
-  `pags_start` tinyint(3) unsigned DEFAULT '0' COMMENT 'és la pàgina inicial del controlador?',
+  `pags_codi` varchar(50) DEFAULT NULL                    COMMENT 'codi de la pagina (independent de idioma)',
+  `pags_parent` varchar(50) DEFAULT NULL                  COMMENT 'menu principal d''on penja',
+  `pags__controllers_id` int(10) unsigned DEFAULT NULL    COMMENT 'controllador al que pertany la pàgina',
+  `pags_start` tinyint(3) unsigned DEFAULT '0'            COMMENT 'és la pàgina inicial del controlador?',
   PRIMARY KEY (`pags_id`),
   KEY `pags__controllers_id` (`pags__controllers_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=153 ;
@@ -91,32 +91,36 @@ CREATE TABLE `pags` (
 --
 
 INSERT INTO `pags` (`pags_id`, `pags_codi`, `pags_parent`, `pags__controllers_id`, `pags_start`) VALUES
-(88, 'inici', 'portada', 3, 1),
+(88,  'inici', 'portada', 3, 1),
+(100, 'overview', 'sup_overview', 3, 0),
 (128, 'general_behavior', 'sup_tour', 3, 0),
-(129, 'social_sharing', 'sup_tour', 3, 0),
-(130, 'real_time', 'sup_tour', 3, 0),
-(131, 'import_export', 'sup_tour', 3, 0),
-(132, 'overview', 'sup_features', 3, 0),
-(133, 'group_tags', 'sup_features', 3, 0),
-(134, 'smart_group', 'sup_features', 3, 0),
-(135, 'instant_sincronization', 'sup_features', 3, 0),
-(136, 'really_search', 'sup_features', 3, 0),
-(137, 'imports_exports', 'sup_features', 3, 0),
-(138, 'technical_details', 'sup_features', 3, 0),
+(129, 'social_sharing',   'sup_tour', 3, 0),
+(130, 'real_time',        'sup_tour', 3, 0),
+(131, 'import_export',    'sup_tour', 3, 0),
+(200, 'what_is_skaeda',            'sup_features', 3, 0),
+(201, 'general_structure',         'sup_features', 3, 0),
+(202, 'smart_manual_groups',       'sup_features', 3, 0),
+(203, 'social_tagging',            'sup_features', 3, 0),
+(204, 'bookmark_management',       'sup_features', 3, 0),
+(205, 'quick_search',              'sup_features', 3, 0),
+(206, 'import_and_export',         'sup_features', 3, 0),
+(207, 'bookmarklet',               'sup_features', 3, 0),
+(208, 'instant_synchronization',   'sup_features', 3, 0),
+(209, 'subscriptions_invitations', 'sup_features', 3, 0),
 (139, 'pricing', 'sup_pricing', 3, 0),
-(140, 'faqs', 'sup_support', 3, 0),
+(149, 'pricing', 'sup_pricing', 3, 0),
+(140, 'faqs',        'sup_support', 3, 0),
 (141, 'developpers', 'sup_support', 3, 0),
-(142, 'forum', 'sup_support', 3, 0),
+(142, 'forum',       'sup_support', 3, 0),
 (143, 'login', 'sup_login', 3, 0),
 (144, 'company', 'sup_company', 3, 0),
 (145, 'blog', '', 3, 0),
-(146, 'about', 'company', 3, 0),
+(146, 'about',   'company', 3, 0),
 (147, 'contact', 'company', 3, 0),
-(148, 'press', 'company', 3, 0),
-(149, 'pricing', 'sup_pricing', 3, 0),
-(150, 'segurity', '', 3, 0),
+(148, 'press',   'company', 3, 0),
+(150, 'segurity',       '', 3, 0),
 (151, 'privacy_policy', '', 3, 0),
-(152, 'terms_service', '', 3, 0);
+(152, 'terms_service',  '', 3, 0);
 
 -- --------------------------------------------------------
 
@@ -143,6 +147,9 @@ INSERT INTO `pags_at` (`pags_at_id`, `pags_at__pags_id`, `pags_at_idioma`, `pags
 (687, 88, 'en', NULL, NULL, '/'),
 (688, 88, 'ca', NULL, NULL, 'inici'),
 (689, 88, 'es', NULL, NULL, 'inicio'),
+(10000, 100, 'en', NULL, NULL, 'overview'),
+(10001, 100, 'ca', NULL, NULL, 'introduccio'),
+(10002, 100, 'es', NULL, NULL, 'introduccion'),
 (702, 128, 'en', NULL, NULL, 'general-behavior'),
 (703, 128, 'ca', NULL, NULL, 'comportament-general'),
 (704, 128, 'es', NULL, NULL, 'comportamiento-general'),
@@ -155,25 +162,40 @@ INSERT INTO `pags_at` (`pags_at_id`, `pags_at__pags_id`, `pags_at_idioma`, `pags
 (711, 131, 'en', NULL, NULL, 'import-and-exports'),
 (712, 131, 'ca', NULL, NULL, 'importacio-i-exportacio'),
 (713, 131, 'es', NULL, NULL, 'importacion-y-exportacion'),
-(717, 133, 'en', NULL, NULL, 'group-and-tags'),
-(718, 133, 'ca', NULL, NULL, 'grup-i-etiquetes'),
-(719, 133, 'es', NULL, NULL, 'grupo-y-etiquetas'),
-(720, 134, 'en', NULL, NULL, 'smart-groups'),
-(721, 134, 'ca', NULL, NULL, 'grups-inteligents'),
-(722, 134, 'es', NULL, NULL, 'grupos-inteligentes'),
-(723, 135, 'en', NULL, NULL, 'instant-sincronization'),
-(724, 135, 'ca', NULL, NULL, 'sincronitzacio-instantanea'),
-(725, 135, 'es', NULL, NULL, 'sincronizacion-instantanea'),
-(741, 138, 'en', NULL, NULL, 'technical-details'),
-(742, 138, 'ca', NULL, NULL, 'detalls-tecnis'),
-(743, 138, 'es', NULL, NULL, 'detalles-tecnicos'),
+(20000, 200, 'en', NULL, NULL, 'what-is-skaeda'),
+(20001, 200, 'ca', NULL, NULL, 'que-es-skaeda'),
+(20002, 200, 'es', NULL, NULL, 'que-es-skaeda'),
+(20100, 201, 'en', NULL, NULL, 'general-structure'),
+(20101, 201, 'ca', NULL, NULL, 'estructura-general'),
+(20102, 201, 'es', NULL, NULL, 'estructura-general'),
+(20200, 202, 'en', NULL, NULL, 'smart-and-manual-groups'),
+(20201, 202, 'ca', NULL, NULL, 'grups-automatics-i-manuals'),
+(20202, 202, 'es', NULL, NULL, 'grupos-automaticos-y-manuales'),
+(20300, 203, 'en', NULL, NULL, 'social-tagging'),
+(20301, 203, 'ca', NULL, NULL, 'etiquetatge-social'),
+(20302, 203, 'es', NULL, NULL, 'etiquetaje-social'),
+(20400, 204, 'en', NULL, NULL, 'bookmark-management'),
+(20401, 204, 'ca', NULL, NULL, 'gestio-de-marcadors'),
+(20402, 204, 'es', NULL, NULL, 'gestion-de-marcadores'),
+(20500, 205, 'en', NULL, NULL, 'quick-search'),
+(20501, 205, 'ca', NULL, NULL, 'cerca-rapida'),
+(20502, 205, 'es', NULL, NULL, 'busqueda-rapida'),
+(20600, 206, 'en', NULL, NULL, 'import-and-export'),
+(20601, 206, 'ca', NULL, NULL, 'importacio-i-exportacio'),
+(20602, 206, 'es', NULL, NULL, 'importacion-y-exportacion'),
+(20700, 207, 'en', NULL, NULL, 'bookmarklet'),
+(20701, 207, 'ca', NULL, NULL, 'bookmarklet'),
+(20702, 207, 'es', NULL, NULL, 'bookmarklet'),
+(20800, 208, 'en', NULL, NULL, 'instant-synchronization'),
+(20801, 208, 'ca', NULL, NULL, 'sincronitzacio-instantanea'),
+(20802, 208, 'es', NULL, NULL, 'sincronizacion-instantanea'),
+(20900, 209, 'en', NULL, NULL, 'subscriptions-and-invitations'),
+(20901, 209, 'ca', NULL, NULL, 'subscripcions-i-invitacions'),
+(20902, 209, 'es', NULL, NULL, 'subscripciones-y-invitaciones'),
 (747, 139, 'en', NULL, NULL, 'pricing'),
 (750, 140, 'en', NULL, NULL, 'faqs'),
 (751, 140, 'ca', NULL, NULL, 'preguntes-freqeents'),
 (752, 140, 'es', NULL, NULL, 'preguntas-frecuentes'),
-(759, 137, 'en', NULL, NULL, 'imports-and-exports'),
-(760, 137, 'ca', NULL, NULL, 'importacions-i-exportacions'),
-(761, 137, 'es', NULL, NULL, 'importaciones-y-exportaciones'),
 (762, 141, 'en', NULL, NULL, 'developpers'),
 (763, 141, 'ca', NULL, NULL, 'desenvolupadors'),
 (764, 141, 'es', NULL, NULL, 'desarrolladores'),
@@ -209,13 +231,7 @@ INSERT INTO `pags_at` (`pags_at_id`, `pags_at__pags_id`, `pags_at_idioma`, `pags
 (803, 152, 'es', NULL, NULL, 'terminos-y-servicio'),
 (813, 150, 'en', NULL, NULL, 'securityy'),
 (814, 150, 'ca', NULL, NULL, 'seguritat'),
-(815, 150, 'es', NULL, NULL, 'seguridad'),
-(828, 132, 'en', NULL, NULL, 'overview'),
-(829, 132, 'ca', NULL, NULL, 'resum'),
-(830, 132, 'es', NULL, NULL, 'resumen'),
-(831, 136, 'en', NULL, NULL, 'really-fast-search'),
-(832, 136, 'ca', NULL, NULL, 'cerca-molt-rapida'),
-(833, 136, 'es', NULL, NULL, 'busqueda-muy-rapida');
+(815, 150, 'es', NULL, NULL, 'seguridad');
 
 -- --------------------------------------------------------
 
