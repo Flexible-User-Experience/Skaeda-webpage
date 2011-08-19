@@ -67,7 +67,8 @@ INSERT INTO `idioma` (`idioma_id`, `idioma_abr`, `idioma_nom`, `idioma__estat_id
 (1, 'ca', 'Català',   1, 2),
 (2, 'es', 'Español',  1, 3),
 (3, 'en', 'English',  1, 1),
-(4, 'fr', 'Français', 0, 4);
+(4, 'fr', 'Français', 1, 4),
+(5, 'it', 'Italiano', 1, 5);
 
 -- --------------------------------------------------------
 
@@ -91,6 +92,7 @@ CREATE TABLE `pags` (
 
 INSERT INTO `pags` (`pags_id`, `pags_codi`, `pags_parent`, `pags__controllers_id`, `pags_start`) VALUES
 (88,  'inici', 'portada', 3, 1),
+(100, 'overview', 'sup_overview', 3, 0),
 (128, 'general_behavior', 'sup_tour', 3, 0),
 (129, 'social_sharing',   'sup_tour', 3, 0),
 (130, 'real_time',        'sup_tour', 3, 0),
@@ -145,6 +147,9 @@ INSERT INTO `pags_at` (`pags_at_id`, `pags_at__pags_id`, `pags_at_idioma`, `pags
 (687, 88, 'en', NULL, NULL, '/'),
 (688, 88, 'ca', NULL, NULL, 'inici'),
 (689, 88, 'es', NULL, NULL, 'inicio'),
+(10000, 100, 'en', NULL, NULL, 'overview'),
+(10001, 100, 'ca', NULL, NULL, 'introduccio'),
+(10002, 100, 'es', NULL, NULL, 'introduccion'),
 (702, 128, 'en', NULL, NULL, 'general-behavior'),
 (703, 128, 'ca', NULL, NULL, 'comportament-general'),
 (704, 128, 'es', NULL, NULL, 'comportamiento-general'),
@@ -187,25 +192,10 @@ INSERT INTO `pags_at` (`pags_at_id`, `pags_at__pags_id`, `pags_at_idioma`, `pags
 (20900, 209, 'en', NULL, NULL, 'subscriptions-and-invitations'),
 (20901, 209, 'ca', NULL, NULL, 'subscripcions-i-invitacions'),
 (20902, 209, 'es', NULL, NULL, 'subscripciones-y-invitaciones'),
---	(717, 133, 'en', NULL, NULL, 'group-and-tags'),
---	(718, 133, 'ca', NULL, NULL, 'grup-i-etiquetes'),
---	(719, 133, 'es', NULL, NULL, 'grupo-y-etiquetas'),
---	(720, 134, 'en', NULL, NULL, 'smart-groups'),
---	(721, 134, 'ca', NULL, NULL, 'grups-inteligents'),
---	(722, 134, 'es', NULL, NULL, 'grupos-inteligentes'),
---	(723, 135, 'en', NULL, NULL, 'instant-sincronization'),
---	(724, 135, 'ca', NULL, NULL, 'sincronitzacio-instantanea'),
---	(725, 135, 'es', NULL, NULL, 'sincronizacion-instantanea'),
---	(741, 138, 'en', NULL, NULL, 'technical-details'),
---	(742, 138, 'ca', NULL, NULL, 'detalls-tecnis'),
---	(743, 138, 'es', NULL, NULL, 'detalles-tecnicos'),
 (747, 139, 'en', NULL, NULL, 'pricing'),
 (750, 140, 'en', NULL, NULL, 'faqs'),
 (751, 140, 'ca', NULL, NULL, 'preguntes-freqeents'),
 (752, 140, 'es', NULL, NULL, 'preguntas-frecuentes'),
---	(759, 137, 'en', NULL, NULL, 'imports-and-exports'),
---	(760, 137, 'ca', NULL, NULL, 'importacions-i-exportacions'),
---	(761, 137, 'es', NULL, NULL, 'importaciones-y-exportaciones'),
 (762, 141, 'en', NULL, NULL, 'developpers'),
 (763, 141, 'ca', NULL, NULL, 'desenvolupadors'),
 (764, 141, 'es', NULL, NULL, 'desarrolladores'),
@@ -242,12 +232,6 @@ INSERT INTO `pags_at` (`pags_at_id`, `pags_at__pags_id`, `pags_at_idioma`, `pags
 (813, 150, 'en', NULL, NULL, 'securityy'),
 (814, 150, 'ca', NULL, NULL, 'seguritat'),
 (815, 150, 'es', NULL, NULL, 'seguridad');
---	(828, 132, 'en', NULL, NULL, 'overview'),
---	(829, 132, 'ca', NULL, NULL, 'resum'),
---	(830, 132, 'es', NULL, NULL, 'resumen'),
---	(831, 136, 'en', NULL, NULL, 'really-fast-search'),
---	(832, 136, 'ca', NULL, NULL, 'cerca-molt-rapida'),
---	(833, 136, 'es', NULL, NULL, 'busqueda-muy-rapida');
 
 -- --------------------------------------------------------
 
