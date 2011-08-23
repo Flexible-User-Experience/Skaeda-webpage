@@ -118,7 +118,7 @@ INSERT INTO `pags` (`pags_id`, `pags_codi`, `pags_parent`, `pags__controllers_id
 (146, 'about',   'company', 3, 0),
 (147, 'contact', 'company', 3, 0),
 (148, 'press',   'company', 3, 0),
-(150, 'segurity',       '', 3, 0),
+(150, 'security',       '', 3, 0),
 (151, 'privacy_policy', '', 3, 0),
 (152, 'terms_service',  '', 3, 0);
 
@@ -227,10 +227,10 @@ INSERT INTO `pags_at` (`pags_at_id`, `pags_at__pags_id`, `pags_at_idioma`, `pags
 (799, 151, 'ca', NULL, NULL, 'politica-privadesa'),
 (800, 151, 'es', NULL, NULL, 'politica-privacidad'),
 (801, 152, 'en', NULL, NULL, 'terms-and-service'),
-(802, 152, 'ca', NULL, NULL, 'termes-i-servei'),
-(803, 152, 'es', NULL, NULL, 'terminos-y-servicio'),
-(813, 150, 'en', NULL, NULL, 'securityy'),
-(814, 150, 'ca', NULL, NULL, 'seguritat'),
+(802, 152, 'ca', NULL, NULL, 'termes-del-servei'),
+(803, 152, 'es', NULL, NULL, 'condiciones-del-servicio'),
+(813, 150, 'en', NULL, NULL, 'security'),
+(814, 150, 'ca', NULL, NULL, 'seguretat'),
 (815, 150, 'es', NULL, NULL, 'seguridad');
 
 -- --------------------------------------------------------
