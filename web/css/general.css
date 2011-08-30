@@ -325,49 +325,43 @@ ul.menu_h li{
 	height:455px;
 	background-repeat:no-repeat;
 	position:relative;
+	border: solid 1px #000;
 }
 
 /*Imatges submenus Overview*/
-#bloc_llista.bloc_overview{background-image:url(img/fons_decor_overview.jpg);}
+#bloc_llista.bloc_overview{background-image:url(img/01-overview.png);}
 
 /*Imatges submenus Features*/
 #bloc_llista.bloc_what_is_skaeda{background-image:url(img/fons_decor_overview.jpg);}
-#bloc_llista.bloc_general_structure{background-image:url(img/fons_decor_overview.jpg);}
-#bloc_llista.bloc_smart_manual_groups{background-image:url(img/fons_decor_smartgroups.jpg);}
-#bloc_llista.bloc_social_tagging{background-image:url(img/fons_decor_overview.jpg);}
-#bloc_llista.bloc_bookmark_management{background-image:url(img/fons_decor_overview.jpg);}
-#bloc_llista.bloc_quick_search{background-image:url(img/fons_decor_fastsearch.jpg);}
+#bloc_llista.bloc_general_structure{background-image:url(img/02-general.png);}
+#bloc_llista.bloc_smart_manual_groups{background-image:url(img/03-smart.png);}
+#bloc_llista.bloc_social_tagging{background-image:url(img/04-social.png);}
+#bloc_llista.bloc_bookmark_management{background-image:url(img/05-bookmark.png);}
+#bloc_llista.bloc_quick_search{background-image:url(img/06-quick.png);}
 #bloc_llista.bloc_import_and_export{background-image:url(img/fons_decor_importsexports.jpg);}
-#bloc_llista.bloc_bookmarklet{background-image:url(img/fons_decor_overview.jpg);}
+#bloc_llista.bloc_bookmarklet{background-image:url(img/09-bookmarklet.png);}
 #bloc_llista.bloc_instant_synchronization{background-image:url(img/fons_decor_sincro.jpg);}
 #bloc_llista.bloc_subscriptions_invitations{background-image:url(img/fons_decor_technical.jpg);}
 
 #conts .cos #bloc_llista ul{
-	width:513px;
-	background-color:rgba(255,255,255,0.9);
-	border-top:1px solid #CCC;
+	width:553px;
 	margin:0;
-	
 	position:absolute;
-	left:20px;
-	bottom:20px;
+	left:0px;
+	bottom:0px;
+	list-style-position: inside;
 }
 
 #conts .cos #bloc_llista ul li{
-	border-bottom:1px solid #CCC;
-	color:#333;
+	color:#AE5700;
 	font-size:0.9em;
-	background:transparent;
+	background:rgba(255, 255, 143, 0.95);
 	padding:8px;
 	margin:0;
+	list-style-type: disc;
+	border-top: solid 1px #000;
 }
 	
-
-
-
-
-
-
 
 	
 
