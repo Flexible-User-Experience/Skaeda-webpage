@@ -185,6 +185,9 @@ ul.menu_h li{
 	height:39px;
 }
 
+.lang_es #capcelera_menu .menu_nav2 a{background-image:url(img/btn_cap_login_es.png);}
+.lang_ca #capcelera_menu .menu_nav2 a{background-image:url(img/btn_cap_login_ca.png);}
+
 #capcelera_menu .menu_nav2  .login a{width:90px;}
 #capcelera_menu .menu_nav2  .login a:hover{background-position:left bottom;}
 
@@ -231,7 +234,10 @@ ul.menu_h li{
 #conts h2{
 	color:#C60;
 	font-size:3.3em;
-	margin-bottom:20px;
+	padding-bottom:10px;
+	border-bottom:1px solid #C8C8C8;
+	margin-bottom:30px;
+
 }
 
 #conts .conts_2cols .conts_col1{
@@ -264,7 +270,8 @@ ul.menu_h li{
 	display:block;
 	float:right;
 	color:#666;
-}	
+}
+
 
 #conts_menu ul li.actiu a{	background-color:#EEE;}
 
@@ -275,6 +282,30 @@ ul.menu_h li{
 	background-position:right center;
 
 }
+
+.multimenu #conts_menu ul li.actiu ul{
+	border:0;
+	padding:10px 20px 10px 10px;
+	font-size:1.2em;
+}
+
+.multimenu #conts_menu ul li.actiu ul li{
+	border:0;
+	padding-left:15px;
+	margin-bottom:15px;
+	background:url(img/decor_bullet_menu.png) no-repeat left 3px;
+}
+
+.multimenu #conts_menu ul li.actiu {
+	background-color:#EEE;
+}
+
+
+.multimenu  #conts_menu ul li.actiu a{
+	font-weight:bold;
+	background:transparent;
+}
+
 
 #conts .cos{
 	font-size:1.3em;
@@ -460,6 +491,11 @@ ul.menu_h li{
 	min-height:240px;
 }
 
+.sec-sup_support #peu{
+	background:transparent;
+	padding-top:20px;
+	}
+
 #peu_signup{
 	width:425px;
 	margin:0 auto;
@@ -467,6 +503,16 @@ ul.menu_h li{
 	background:url(img/btn_peu_signup_en.png) no-repeat left center;
 	position:relative;
 	margin-bottom:20px;
+}
+
+.lang_ca #peu_signup{
+	background-image:url(img/btn_peu_signup_ca.png);
+	width:440px;
+}
+
+.lang_es #peu_signup{
+	background-image:url(img/btn_peu_signup_es.png);
+	width:475px;
 }
 
 #peu_signup a{
@@ -478,8 +524,11 @@ ul.menu_h li{
 }
 
 #peu_signup a:hover{
-	background:url(img/btn_peu_signup_en.png) no-repeat -450px 0px;
+	background:url(img/btn_peu_signup_en.png) no-repeat right 0px;
 }
+
+.lang_ca #peu_signup a:hover{ background-image:url(img/btn_peu_signup_ca.png);}
+.lang_es #peu_signup a:hover{ background-image:url(img/btn_peu_signup_es.png);}
 
 #peu .llista_links dl{
 	float:left;
