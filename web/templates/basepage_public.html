@@ -5,9 +5,9 @@
 	-->
 *}
 {assign var=_diccionari value=$infopag.idioma|cat:'.conf'}
+{config_load file='base.conf' section=$infopag.subseccio}
 {config_load file=$_diccionari section='generics'}
 {config_load file=$_diccionari section=$infopag.subseccio}
-{config_load file='base.conf' section=$infopag.subseccio}
 {if #OPT_PARENT#}
 	{config_load file=$_diccionari section=#OPT_PARENT#}
 {/if}
@@ -83,7 +83,7 @@
 			<p id="peu_signup">
 				<span class="cd_msg">
 					{#AD_SIGN_UP#}
-					<a href="http://services.skaeda.com/?fun=newaccount"><span>{#AD_TRY_IT#}</span></a>
+					<a href="http://services.skaeda.com/?fun=newaccount{#SIGNUP_PARAMS#|istrue:'_self_'}"><span>{#AD_TRY_IT#}</span></a>
 				</span>
 				
 			</p>
@@ -124,12 +124,12 @@
 				<div  class="lang_select">
 					<select name="idiomes" id="combolng" onchange="">
 					{foreach from=$idiomes key=codi item=nom name=loop}
-						<option value="{$codi}|{$_wr}{$transpag.$codi.inici}" {$codi|choice:$infopag.idioma:#_FRSEL#}>{$nom}</option>
+						<option value="{$codi}|{$_wr}{$transpag.$codi[$infopag.subseccio]}" {$codi|choice:$infopag.idioma:#_FRSEL#}>{$nom}</option>
 					{/foreach}	
 					</select>
 					<span class="notext">
 					{foreach from=$idiomes key=codi item=nom name=loop}
-						<a href="{$_wr}{$transpag.$codi.inici}">{$nom}</a>
+						<a href="{$_wr}{$transpag.$codi[$infopag.subseccio]}">{$nom}</a>
 					{/foreach}
 					</span>
 				</div>

@@ -405,7 +405,11 @@ ul.menu_h li{
 
 
 #conts .cos .caixa_boto a,
-#conts .cos ul.llista_guia .cd_boto a{outline: 0;}
+#conts .cos ul.llista_guia .cd_boto a
+	{outline: 0;cursor:move;}
+
+
+	
 
 
 #conts .cos .caixa_boto{
@@ -414,7 +418,6 @@ ul.menu_h li{
 }
 
 #conts .cos .caixa_boto img{
-	display:block;
 	margin:0 auto;
 }
 
@@ -439,6 +442,16 @@ ul.menu_h li{
 	left:46px;
 }
 
+#conts .cos .snapshot{position:relative;}
+#conts .cos .snapshot span{
+	display:block;
+	position:absolute;
+	left:0;
+	top:0;
+	width:553px;
+	height:455px;
+	background:url(img/overlay_snapshots.png) no-repeat;
+}
 
 
 
@@ -557,6 +570,7 @@ ul.menu_h li{
 	padding:15px 15px 15px 0;
 	text-align:center;
 }
+
 
 
 
@@ -696,6 +710,7 @@ ul.menu_h li{
 	
 
 }
+
 
 #peu_signup a:hover{
 	background-position:left bottom;
