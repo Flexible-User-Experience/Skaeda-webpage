@@ -55,8 +55,11 @@ $controller_act=coalesce($babelia[$subseccio_act]['config']['controller'],CGA_DE
 //$_SESSION['controller']=$controller_act;	//posar el controller a la sessió
 
 $idiomes= QueryIntoOption($_query['idiomes']);
-//$idiomabase=key($idiomes); //l'idioma base serà el primer que hi hagi
 $idiomabase=key($idiomes);
+$idioma_navegador=get_client_language($idiomes,$idiomabase);
+
+//$idiomabase=key($idiomes); //l'idioma base serà el primer que hi hagi
+
 
 
 
@@ -74,7 +77,7 @@ else { //guais, de moment no hi ha error
 	}
 	
 	//decidir l'idioma. 1-segons la pagina, 2-segons session
-	$idioma=coalesce($traductor[$pag_actual]['idioma'],$_SESSION['idioma'],$idiomabase);
+	$idioma=coalesce($traductor[$pag_actual]['idioma'],$_SESSION['idioma'],$idioma_cookie,$idioma_navegador,$idiomabase);
 
 	//recopilo info bàsica de la pàgina
 	$infopag=array("idioma"=>$idioma,
@@ -114,7 +117,7 @@ if ($error404){ //ha petat alguna cosa, mostra error
 	$plantilla_actual="basepage_".($controller_act?$controller_act:CGA_DEF_CONTROLLER).".html"; //	aixo portaria a la pàgina de login si no hi ha controller
 	$seccio='error404';
 	$infopag= array(
-				'idioma'=>coalesce($idioma,$idiomabase),
+				'idioma'=>coalesce($idioma,$idioma_navegador,$idiomabase),
 				'subseccio'=>$seccio);
 	$smarty->assign(array(
 		'seccio'=>$seccio,

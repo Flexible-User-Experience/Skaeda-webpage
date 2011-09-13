@@ -9,14 +9,20 @@ $infopag=array_merge($infopag,array(
 				
 /***** PROCESSAR CADA PÀGINA***************/
 		$autopag=true;	//ULL - intentarà mostrar la pàgina encara que no sigui un case, sempre que existeixi el template (i que estigui definida a mysql.pags)	
+		$thispag=$infopag['subseccio'];
 		
 		switch($thispag)
 		{
 			case 'inici':
 			
-				if($PV['accio']) {
-						$tourl=$transpag[$PV['idiomes']][$thispag];
-						gotoURL($tourl,'');
+				if ($pag_actual=='' && $idioma!=$idioma_cookie)
+				{				
+					if ($idioma_cookie && isset($idiomes[$idioma_cookie]))
+						{$topag=$transpag[$idioma_cookie][$thispag];}
+					elseif ($idioma_navegador!=$idioma)
+						{$topag=$transpag[$idioma_navegador][$thispag];}
+						
+					if ($topag) gotoURL($topag);
 					}
 			break;	
 			

@@ -84,10 +84,9 @@ mysql_query ("SET NAMES 'utf8'");
 
 /******IDIOMA BASE ************/
 $idiomabase='en';
+$idioma_cookie=$_COOKIE['idioma'];
 
 
 /****MAGICS*****/
 define('AUTO_ORDER', true);
 define('NO_PUBLICAT',2);
-
-?>

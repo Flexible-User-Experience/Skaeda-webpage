@@ -18,7 +18,7 @@ html {
  
  
 body {
-	font-family: Helvetica, Arial, sans-serif;
+	font-family: 'Open Sans', sans-serif, Helvetica, Arial;
 	background-color:#BFBFBF;
 	font-size:0.75em;
 }
@@ -181,14 +181,25 @@ ul.menu_h li{
 
 #capcelera_menu .menu_nav2 a{
 	display:block;
-	background:url(img/btn_cap_menu2_en.png) no-repeat;
 	height:39px;
+	line-height:39px;
+	padding:0 10px;
+	color:#FFF;
+	font-size:1.3em;
+	font-weight:bold;
+
+	text-shadow: 1px 1px 1px #000;
+	text-align:center;
 }
 
-.lang_es #capcelera_menu .menu_nav2 a{background-image:url(img/btn_cap_login_es.png);}
-.lang_ca #capcelera_menu .menu_nav2 a{background-image:url(img/btn_cap_login_ca.png);}
 
-#capcelera_menu .menu_nav2  .login a{width:90px;}
+
+#capcelera_menu .menu_nav2  .login a{
+	background:url(img/btn_login.png) repeat-x;
+	min-width:70px;
+
+}
+
 #capcelera_menu .menu_nav2  .login a:hover{background-position:left bottom;}
 
 #capcelera_submenu{
@@ -225,6 +236,8 @@ ul.menu_h li{
 	background-color:#FFF;
 	padding-bottom:80px;
 }
+
+.sec-overview #main{padding-bottom:0;}
 
 #conts{
 	padding-top:40px;
@@ -343,9 +356,87 @@ ul.menu_h li{
 	margin-bottom:0.4em;
 }
 
+#conts .cos ul.llista_gen2 li{
+	background:url(img/decor_bullet_menu.png) no-repeat left center;
+}
+
+#conts .cos ul.llista_accordion li div{margin-top:10px;}
+
+#conts .cos ul.llista_guia {
+	margin-left:-24px;
+}
+
+#conts .cos ul.llista_guia li{
+	float:left;
+	background:transparent;
+	padding:0;
+	margin-left:24px;
+	position:relative;
+}
+
+#conts .cos ul.llista_guia li h3{
+	font-weight:bold;
+	color:#C60;
+	font-size:1.3em;
+	margin-bottom:5px;
+}
+
+#conts .cos ul.llista_guia li h3 span{
+	background:url(img/decor_bullet_menu.png) no-repeat left center;
+	padding-left:10px;
+}
+
+#conts .cos ul.llista_guia .cd_boto{
+	position:absolute;
+	left:55px;
+	bottom:56px;
+}
+
+#conts .cos ul.llista_guia .cd_boto img{display:block;}
+
+#conts .cos ul.llista_guia .cd_boto .cd_ovr{
+	background:url(img/decor_pointer.png) no-repeat left center;
+	position:absolute;
+	width:19px;
+	height:19px;
+	left:150px;
+	bottom:-10px;
+}
+
+
+#conts .cos .caixa_boto a,
+#conts .cos ul.llista_guia .cd_boto a{outline: 0;}
+
+
+#conts .cos .caixa_boto{
+	margin:50px auto;
+	text-align:center;
+}
+
+#conts .cos .caixa_boto img{
+	display:block;
+	margin:0 auto;
+}
+
+
+
+
 #conts .cos a{
 	color:#C60;
 	text-decoration:underline;
+}
+
+#conts .cos .cos_backscreen{
+	background:url(img/fons_backscreen.jpg) no-repeat center bottom;
+	padding-bottom:590px;
+	position:relative;
+}
+
+#conts .cos .cos_backscreen img{
+	display:block;
+	position:absolute;
+	bottom:0;
+	left:46px;
 }
 
 
@@ -412,14 +503,59 @@ ul.menu_h li{
 }
 
 
-#conts_pricetable{
+/*#conts_pricetable{
 	background:url(img/decor_pricestable_en.png) no-repeat right top;
 	width:555px;
 	height:280px;
-}
+}*/
+
+
+#conts_pricetable {float:right;}
 
 #conts_pricetable table{
-	display:none;
+	border-collapse:collapse;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size:1.3em;
+}
+
+#conts_pricetable th{
+	text-align:center;
+	background:url(img/decor_pricestbl_logos.png) no-repeat center -150px;
+	padding-top:45px;
+	padding-bottom:10px;
+	color:#C60;
+}
+
+#conts_pricetable th.free_account{background-position:center top;}
+#conts_pricetable th.premium_account{background-position:center -100px;}
+
+
+
+
+#conts_pricetable tr td{
+	border-bottom:10px solid #FFF;
+}
+
+
+#conts_pricetable .col1{
+	background-color:#C60;
+	width:145px;
+	padding:15px 0 15px 13px;
+	color:#FFF;
+}
+
+#conts_pricetable .col2{
+	background:url(img/decor_pricestbl_bg.png) right center no-repeat #E6E6E6;
+	padding:15px;
+	width:180px;
+	text-align:center;
+}
+
+#conts_pricetable .col3{
+	background-color:#CCC;
+	width:170px;
+	padding:15px 15px 15px 0;
+	text-align:center;
 }
 
 
@@ -441,6 +577,7 @@ ul.menu_h li{
 	background:url(img/fons_decor_portada.jpg) no-repeat right top;
 	height:325px;
 	padding-right:500px;
+	
 }
 
 #conts .banner_portada .cd_extra{
@@ -465,9 +602,26 @@ ul.menu_h li{
 	color:#000;
 	padding-top:18px;
 	margin-bottom:20px;
+	font-family: 'Open Sans', sans-serif;
+	line-height:0.95;
+	border-bottom:0;
+
 }
 
-#conts .banner_portada h2 span{display:block;}
+#conts .banner_portada h2 span {
+	display:inline-block;
+	position:relative;
+}
+#conts .banner_portada h2 span span{display:block;}
+
+#conts .banner_portada h2 .cd_extra2{
+	width:60px;
+	height:60px;
+	position:absolute;
+	right:-40px;
+	bottom:33px;
+	background:url(img/fons_decor_portadac.png) no-repeat;
+}
 
 #conts .banner_portada p{
 	color:#C60;
@@ -497,38 +651,56 @@ ul.menu_h li{
 	}
 
 #peu_signup{
-	width:425px;
 	margin:0 auto;
 	height:100px;
-	background:url(img/btn_peu_signup_en.png) no-repeat left center;
+	display:block;
+	text-align:center;
 	position:relative;
 	margin-bottom:20px;
 }
 
-.lang_ca #peu_signup{
-	background-image:url(img/btn_peu_signup_ca.png);
-	width:440px;
+
+
+#peu_signup .cd_msg{
+	display:inline-block;
+	position:relative;
+	margin:0 auto;
+	font-family: 'Open Sans', sans-serif;
+	color:#FFF;
+	font-size:1.3em;
+
+	padding:15px 180px 10px 0;
+	text-align:right;
+	text-shadow: 1px 1px 1px #000;
 }
 
-.lang_es #peu_signup{
-	background-image:url(img/btn_peu_signup_es.png);
-	width:475px;
+#peu_signup strong{
+	display:block;
+	font-size:1.8em;
+	font-weight:normal;
 }
 
 #peu_signup a{
 	position:absolute;
-	width:172px;
+	background:url(img/btn_signup.png) no-repeat right 0px;
+	font-weight:bold;
+	color:#FFF;
+	width:171px;
 	height:70px;
+	line-height:70px;
+	text-align:center;
+	text-shadow: none;
 	right:0px;
 	top:15px;
+	
+	
+
 }
 
 #peu_signup a:hover{
-	background:url(img/btn_peu_signup_en.png) no-repeat right 0px;
+	background-position:left bottom;
+	text-shadow: 0 0 5px #FFF;
 }
-
-.lang_ca #peu_signup a:hover{ background-image:url(img/btn_peu_signup_ca.png);}
-.lang_es #peu_signup a:hover{ background-image:url(img/btn_peu_signup_es.png);}
 
 #peu .llista_links dl{
 	float:left;

@@ -1108,6 +1108,25 @@ function arxiu2http($nom_fitxer,$carpeta,$inline=false)
 	exit(0);
 }
 
+//obtenir el llenguatge del navegador
+function get_client_language($availableLanguages, $default=''){
+	
+	if (isset($_SERVER['HTTP_ACCEPT_LANGUAGE']))
+	{
+			
+		$langs=explode(',',$_SERVER['HTTP_ACCEPT_LANGUAGE']);
+		//start going through each one
+		foreach ($langs as $value)
+		{
+			$choice=substr($value,0,2);
+			if(isset($availableLanguages[$choice])) {return $choice;}
+		}
+	} 
+	return $default;
+}
+
+
+
 
 
 //variables ghlobals
