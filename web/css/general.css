@@ -306,7 +306,7 @@ ul.menu_h li{
 	border:0;
 	padding-left:15px;
 	margin-bottom:15px;
-	background:url(img/decor_bullet_menu.png) no-repeat left 3px;
+	background:url(img/decor_bullet_menu.png) no-repeat left 5px;
 }
 
 .multimenu #conts_menu ul li.actiu {
@@ -352,13 +352,11 @@ ul.menu_h li{
 }
 #conts .cos ul li{
 	padding-left:20px;
-	background:url(img/decor_bullets1.png) 5px -53px no-repeat;
+	/*background:url(img/decor_bullets1.png) 5px -53px no-repeat;*/
+	background:url(img/decor_bullet_menu.png) no-repeat left 7px;
 	margin-bottom:0.4em;
 }
 
-#conts .cos ul.llista_gen2 li{
-	background:url(img/decor_bullet_menu.png) no-repeat left center;
-}
 
 #conts .cos ul.llista_accordion li div{margin-top:10px;}
 

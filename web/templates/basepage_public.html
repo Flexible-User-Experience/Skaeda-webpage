@@ -147,7 +147,7 @@
 $(document).ready(function() {
 	$("#combolng").change(function() {
 		lang=$("#combolng option:selected").val().split('|');
-		$.cookie('idioma', lang[0])
+		$.cookie('idioma', lang[0],{expires: 183, path: '/'})
 		self.location=lang[1];
 	});
 
@@ -163,6 +163,6 @@ $(document).ready(function() {
 -->
 </script>
 {/literal}
-
+{include file='bloc_analytics.html'}
 </body>
 </html>
