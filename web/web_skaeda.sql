@@ -67,8 +67,8 @@ INSERT INTO `idioma` (`idioma_id`, `idioma_abr`, `idioma_nom`, `idioma__estat_id
 (1, 'ca', 'Català',    1, 2),
 (2, 'es', 'Español',   1, 3),
 (3, 'en', 'English',   1, 1),
-(4, 'fr', 'Française', 1, 4),
-(5, 'it', 'Italiano',  1, 5);
+(4, 'fr', 'Française', 0, 4),
+(5, 'it', 'Italiano',  0, 5);
 
 -- --------------------------------------------------------
 
@@ -94,10 +94,6 @@ INSERT INTO `pags` (`pags_id`, `pags_codi`, `pags_parent`, `pags__controllers_id
 
 (50,  'inici', 'portada', 3, 1),
 (100, 'overview', 'sup_overview', 3, 0),
--- (128, 'general_behavior', 'sup_tour', 3, 0),
--- (129, 'social_sharing',   'sup_tour', 3, 0),
--- (130, 'real_time',        'sup_tour', 3, 0),
--- (131, 'import_export',    'sup_tour', 3, 0),
 (150, 'common_queries',       'sup_tour', 3, 0),
 (151, 'bookmarks_management', 'sup_tour', 3, 0),
 (152, 'tags_and_groups',      'sup_tour', 3, 0),
@@ -155,18 +151,6 @@ INSERT INTO `pags_at` (`pags_at_id`, `pags_at__pags_id`, `pags_at_idioma`, `pags
 (10000, 100, 'en', NULL, NULL, 'overview'),
 (10001, 100, 'ca', NULL, NULL, 'introduccio'),
 (10002, 100, 'es', NULL, NULL, 'introduccion'),
--- (702, 128, 'en', NULL, NULL, 'general-behavior'),
--- (703, 128, 'ca', NULL, NULL, 'comportament-general'),
--- (704, 128, 'es', NULL, NULL, 'comportamiento-general'),
--- (705, 129, 'en', NULL, NULL, 'social-sharing'),
--- (706, 129, 'ca', NULL, NULL, 'comparteix'),
--- (707, 129, 'es', NULL, NULL, 'compartir'),
--- (708, 130, 'en', NULL, NULL, 'real-time-sync'),
--- (709, 130, 'ca', NULL, NULL, 'sincronitzacio-temps-real'),
--- (710, 130, 'es', NULL, NULL, 'sincronizacion-tiempo-real'),
--- (711, 131, 'en', NULL, NULL, 'imports-and-exports'),
--- (712, 131, 'ca', NULL, NULL, 'importar-i-exportar'),
--- (713, 131, 'es', NULL, NULL, 'importar-y-exportar'),
 (15000, 150, 'en', NULL, NULL, 'common-queries'),
 (15001, 150, 'ca', NULL, NULL, 'common-queries-ca'),
 (15002, 150, 'es', NULL, NULL, 'common-queries-es'),
