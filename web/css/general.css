@@ -361,6 +361,7 @@ ul.menu_h li{
 #conts .cos ul.llista_accordion li div{margin-top:10px;}
 
 #conts .cos ul.llista_guia {
+	overflow:hidden;
 	margin-left:-24px;
 }
 
@@ -418,6 +419,18 @@ ul.menu_h li{
 #conts .cos .caixa_boto img{
 	margin:0 auto;
 }
+
+#conts  a.btn_bookmarklet{
+	display:inline-block;
+	width:192px;
+	height:42px;
+	margin:0 auto;
+	background:left top no-repeat;
+}
+
+.lang_ca #conts  a.btn_bookmarklet{background-image:url(img/btn_bookmarklet_ca.png);}
+.lang_en #conts  a.btn_bookmarklet{background-image:url(img/btn_bookmarklet_en.png);}
+.lang_es #conts  a.btn_bookmarklet{background-image:url(img/btn_bookmarklet_es.png);}
 
 
 

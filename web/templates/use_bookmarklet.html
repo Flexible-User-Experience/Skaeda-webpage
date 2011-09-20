@@ -2,14 +2,15 @@
 <h1>{#TITOL#}</h1>
   {include file=$infopag.subseccio|cat:'.lang.':$infopag.idioma:'.html'}
   <div class="caixa_boto">
-	<a href="{#BMARKLET_CODI#}"><img src="{$_wr}img/btn_bookmarklet_{$infopag.idioma}.png" alt="{#BMARKLET_TEXT#}"/></a>
+	<a href="{#BMARKLET_CODI#}" class="btn_bookmarklet" title="{#BMARKLET_TEXT#}"><span class="notext">{#BMARKLET_TEXT#}</span></a>
+	
   </div>
   <ul class="llista_guia">
 	<li>
 		<h3>1 <span>{#HOLD#}</span></h3>
 		<img src="{$_wr}img/bookmarklet_info1.png" alt=""/>
 		<div class="cd_boto">
-			<a href=""><img src="{$_wr}img/btn_bookmarklet_{$infopag.idioma}.png" alt=""/></a>
+<a href="{#BMARKLET_CODI#}" class="btn_bookmarklet" title="{#BMARKLET_TEXT#}"><span class="notext">{#BMARKLET_TEXT#}</span></a>
 			<span class="cd_ovr"></span>
 		</div>
 	</li>
