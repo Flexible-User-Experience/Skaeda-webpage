@@ -40,6 +40,14 @@ q:before, q:after {
 hr {
     display: none;
 }
+
+h3 {
+	font-size: 1.05em;
+	margin-top: 0.5em;
+	padding: 10px 0;
+	color: #C60;
+}
+
 /* Final reset */
 /*defaults, utils*/
 /* new clearfix */
