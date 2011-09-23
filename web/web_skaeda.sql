@@ -115,13 +115,13 @@ INSERT INTO `pags` (`pags_id`, `pags_codi`, `pags_parent`, `pags__controllers_id
 (302, 'forum',           'sup_support', 3, 0),
 (350, 'login', 'sup_login', 3, 0),
 (400, 'company', 'sup_company', 3, 0),
-(401, 'blog', '', 3, 0),
-(402, 'about',   'company', 3, 0),
-(403, 'contact', 'company', 3, 0),
-(404, 'press',   'company', 3, 0),
-(405, 'security',       '', 3, 0),
-(406, 'privacy_policy', '', 3, 0),
-(407, 'terms_service',  '', 3, 0);
+(401, 'blog', 'sup_nopeu', 3, 0),
+(402, 'about',   'sup_company', 3, 0),
+(403, 'contact', 'sup_company', 3, 0),
+(404, 'press',   'sup_company', 3, 0),
+(405, 'security',       'sup_nopeu', 3, 0),
+(406, 'privacy_policy', 'sup_nopeu', 3, 0),
+(407, 'terms_service',  'sup_nopeu', 3, 0);
 
 -- --------------------------------------------------------
 

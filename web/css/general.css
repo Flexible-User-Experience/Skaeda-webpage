@@ -141,9 +141,6 @@ ul.menu_h li{
 }
 
 
-
-
-
 #capcelera{
 	background:url(img/fons_cap.png) repeat-x #fff;
 	mi-height:120px;
@@ -590,21 +587,6 @@ ul.menu_h li{
 	text-align:center;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #conts .banner_portada{
 	position:relative;
 	background:url(img/fons_decor_portada.jpg) no-repeat right top;
@@ -624,11 +606,6 @@ ul.menu_h li{
 	height:63px;
 
 }
-
-
-
-
-
 
 #conts .banner_portada h2{
 	font-size:3.3em;
@@ -662,9 +639,6 @@ ul.menu_h li{
 }
 
 
-
-
-
 /*particularitats*/
 .sec-inici #main{
 	padding-bottom:20px;
@@ -678,10 +652,12 @@ ul.menu_h li{
 	min-height:240px;
 }
 
+.sec-sup_nopeu #peu,
+.sec-sup_company #peu,
 .sec-sup_support #peu{
 	background:transparent;
 	padding-top:20px;
-	}
+}
 
 #peu_signup{
 	margin:0 auto;
@@ -725,9 +701,6 @@ ul.menu_h li{
 	text-shadow: none;
 	right:0px;
 	top:15px;
-	
-	
-
 }
 
 
@@ -788,19 +761,6 @@ ul.menu_h li{
 #peu_extres .logo_peu_dreta:hover{
 	background-position:left bottom;	
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 .ample_tDnD {width:1px;}
