@@ -375,6 +375,9 @@ ul.menu_h li {
 	background:left top no-repeat;
 }
 
+/**
+ **Imatges bookmarklet segons idioma
+ **/
 .lang_ca #conts a.btn_bookmarklet {background-image:url(img/btn_bookmarklet_ca.png);}
 .lang_en #conts a.btn_bookmarklet {background-image:url(img/btn_bookmarklet_en.png);}
 .lang_es #conts a.btn_bookmarklet {background-image:url(img/btn_bookmarklet_es.png);}
@@ -428,11 +431,42 @@ ul.menu_h li {
  **Imatges submenus Features
  **/
 #bloc_llista.bloc_what_is_skaeda {background-image:url(img/fons_decor_overview.jpg);}
-#bloc_llista.bloc_general_structure {background-image:url(img/02-general.png);}
-#bloc_llista.bloc_smart_manual_groups {background-image:url(img/03-smart.png);}
-#bloc_llista.bloc_social_tagging {background-image:url(img/04-social.png);}
-#bloc_llista.bloc_bookmark_management {background-image:url(img/05-bookmark.png);}
-#bloc_llista.bloc_quick_search {background-image:url(img/06-quick.png);}
+
+div.snapshot {
+	width: 553px;
+	height: 455px;
+}
+
+#bloc_general_structure.ca {background-image:url(../img/02-general-ca.png);}
+#bloc_general_structure.en {background-image:url(../img/02-general-en.png);}
+#bloc_general_structure.es {background-image:url(../img/02-general-es.png);}
+#bloc_general_structure.fr {background-image:url(../img/02-general-fr.png);}
+#bloc_general_structure.it {background-image:url(../img/02-general-it.png);}
+
+#bloc_smart_manual_groups.ca {background-image:url(../img/03-smart-ca.png);}
+#bloc_smart_manual_groups.en {background-image:url(../img/03-smart-en.png);}
+#bloc_smart_manual_groups.es {background-image:url(../img/03-smart-es.png);}
+#bloc_smart_manual_groups.fr {background-image:url(../img/03-smart-fr.png);}
+#bloc_smart_manual_groups.it {background-image:url(../img/03-smart-it.png);}
+
+#bloc_social_tagging.ca {background-image:url(../img/04-social-ca.png);}
+#bloc_social_tagging.en {background-image:url(../img/04-social-en.png);}
+#bloc_social_tagging.es {background-image:url(../img/04-social-es.png);}
+#bloc_social_tagging.fr {background-image:url(../img/04-social-fr.png);}
+#bloc_social_tagging.it {background-image:url(../img/04-social-it.png);}
+
+#bloc_bookmark_management.ca {background-image:url(../img/05-bookmark-ca.png);}
+#bloc_bookmark_management.en {background-image:url(../img/05-bookmark-en.png);}
+#bloc_bookmark_management.es {background-image:url(../img/05-bookmark-es.png);}
+#bloc_bookmark_management.fr {background-image:url(../img/05-bookmark-fr.png);}
+#bloc_bookmark_management.it {background-image:url(../img/05-bookmark-it.png);}
+
+#bloc_quick_search.ca {background-image:url(../img/06-quick-ca.png);}
+#bloc_quick_search.en {background-image:url(../img/06-quick-en.png);}
+#bloc_quick_search.es {background-image:url(../img/06-quick-es.png);}
+#bloc_quick_search.fr {background-image:url(../img/06-quick-fr.png);}
+#bloc_quick_search.it {background-image:url(../img/06-quick-it.png);}
+
 #bloc_llista.bloc_import_and_export {background-image:url(img/fons_decor_importsexports.jpg);}
 #bloc_llista.bloc_bookmarklet {background-image:url(img/09-bookmarklet.png);}
 #bloc_llista.bloc_instant_synchronization {background-image:url(img/fons_decor_sincro.jpg);}
