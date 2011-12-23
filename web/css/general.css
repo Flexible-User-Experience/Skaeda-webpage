@@ -470,7 +470,7 @@ ul.menu_h li {
 
 #conts_pricetable th {
 	text-align:center;
-	background:url(img/decor_pricestbl_logos.png) no-repeat center -150px;
+	background:url(img/decor_pricestbl_logos.png) no-repeat center -400px;
 	padding-top:45px;
 	padding-bottom:10px;
 	color:#C60;
@@ -478,6 +478,8 @@ ul.menu_h li {
 
 #conts_pricetable th.free_account {background-position:center top;}
 #conts_pricetable th.premium_account_3 {background-position:center -100px;}
+#conts_pricetable th.premium_account_6 {background-position:center -200px;}
+#conts_pricetable th.premium_account_12 {background-position:center -300px;}
 
 #conts_pricetable tr td {border-bottom:10px solid #FFF;}
 
@@ -490,16 +492,31 @@ ul.menu_h li {
 
 #conts_pricetable .col2 {
 	background:url(img/decor_pricestbl_bg.png) right center no-repeat #E6E6E6;
+	background-color:#E6E6E6;
 	padding:15px;
 	width:180px;
 	text-align:center;
 }
 
 #conts_pricetable .col3 {
-	background-color:#CCC;
+	background-color:#D8D8D8;
 	width:170px;
 	padding:15px 15px 15px 0;
 	text-align:center;
+}
+
+#conts_pricetable .col4 {
+  background-color:#C5C5C5;
+  width:170px;
+  padding:15px 15px 15px 0;
+  text-align:center;
+}
+
+#conts_pricetable .col5 {
+  background-color:#B1B1B1;
+  width:170px;
+  padding:15px 15px 15px 0;
+  text-align:center;
 }
 
 #conts .banner_portada {
