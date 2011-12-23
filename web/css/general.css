@@ -459,12 +459,13 @@ ul.menu_h li {
 
 #conts .cos .cos_col2 {margin-left:390px;}
 
-#conts_pricetable {float:right;}
+/* #conts_pricetable {float:right;} */
 
 #conts_pricetable table {
-	border-collapse:collapse;
+	width: 100%;
+	border-collapse: collapse;
 	font-family: 'Open Sans Condensed', sans-serif;
-	font-size:1.3em;
+	font-size: 1.3em;
 }
 
 #conts_pricetable th {
@@ -476,7 +477,7 @@ ul.menu_h li {
 }
 
 #conts_pricetable th.free_account {background-position:center top;}
-#conts_pricetable th.premium_account {background-position:center -100px;}
+#conts_pricetable th.premium_account_3 {background-position:center -100px;}
 
 #conts_pricetable tr td {border-bottom:10px solid #FFF;}
 

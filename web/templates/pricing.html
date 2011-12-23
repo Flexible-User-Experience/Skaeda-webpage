@@ -1,32 +1,44 @@
 <div class="cos">
 	<h1>{#TITOL#}</h1>
-	<div class="cos_col1">
-		{include file=$infopag.subseccio|cat:'.lang.':$infopag.idioma:'.html'}
+	<div id="conts_pricetable">
+		<table>
+			<tr>
+				<th></th>
+				<th class="free_account">{#FREE_ACCOUNT#}</th>
+				<th class="premium_account_3">{#PREMIUM_ACCOUNT#} 3</th>
+				<th class="premium_account_6">{#PREMIUM_ACCOUNT#} 6</th>
+				<th class="premium_account_12">{#PREMIUM_ACCOUNT#} 12</th>
+			</tr>
+			<tr>
+         <td class="col1">{#ADVERTISING#}</td>
+         <td class="col2">{#YES#}</td>
+         <td class="col3">{#NONE#}</td>
+         <td class="col4">{#NONE#}</td>
+         <td class="col5">{#NONE#}</td>
+       </tr>
+			<tr>
+				<td class="col1">{#DEDICATED_SUPPORT#}</td>
+				<td class="col2">{#NONE#}</td>
+				<td class="col3">{#YES#}</td>
+				<td class="col4">{#YES#}</td>
+				<td class="col5">{#YES#}</td>
+			</tr>
+			<tr>
+				<td class="col1">{#BOOKMARKS_LIMIT#}</td>
+				<td class="col2">250*</td>
+				<td class="col3">500</td>
+				<td class="col4">1.000</td>
+				<td class="col5">{#UNLIMITED#}</td>
+			</tr>
+			<tr>
+         <td class="col1">{#PRICE#}</td>
+         <td class="col2">0 €</td>
+         <td class="col3">3 € / {#YEAR#}</td>
+         <td class="col4">6 € / {#YEAR#}</td>
+         <td class="col5">12 € / {#YEAR#}</td>
+       </tr>
+		</table>
 	</div>
-	<div class="cos_col2">
-		<div id="conts_pricetable">
-			<table>
-				<tr>
-					<th></th>
-					<th class="free_account">{#FREE_ACCOUNT#}</th>
-					<th class="premium_account">{#PREMIUM_ACCOUNT#}</th>
-				</tr>
-				<tr>
-					<td class="col1">{#PRICE#}</td>
-					<td class="col2">0 €</td>
-					<td class="col3">12 € / {#YEAR#}</td>
-				</tr>
-				<tr>
-					<td class="col1">{#DEDICATED_SUPPORT#}</td>
-					<td class="col2">{#NONE#}</td>
-					<td class="col3">{#YES#}</td>
-				</tr>
-				<tr>
-					<td class="col1">{#BOOKMARKS_LIMIT#}</td>
-					<td class="col2">100</td>
-					<td class="col3">{#UNLIMITED#}</td>
-				</tr>
-			</table>
-		</div>
-	</div>
+	<hr/>
+	{include file=$infopag.subseccio|cat:'.lang.':$infopag.idioma:'.html'}
 </div>
