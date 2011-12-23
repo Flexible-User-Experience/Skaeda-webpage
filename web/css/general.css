@@ -462,7 +462,6 @@ ul.menu_h li {
 /* #conts_pricetable {float:right;} */
 
 #conts_pricetable table {
-	width: 100%;
 	border-collapse: collapse;
 	font-family: 'Open Sans Condensed', sans-serif;
 	font-size: 1.3em;
@@ -486,35 +485,35 @@ ul.menu_h li {
 #conts_pricetable .col1 {
 	background-color:#C60;
 	width:145px;
-	padding:15px 0 15px 13px;
+	padding:15px 20px;
 	color:#FFF;
 }
 
 #conts_pricetable .col2 {
 	background:url(img/fonspreu1.png) left center no-repeat #E6E6E6;
-	padding:15px;
 	width:180px;
+	padding:15px 20px;
 	text-align:center;
 }
 
 #conts_pricetable .col3 {
 	background:url(img/fonspreu2.png) left center no-repeat #D8D8D8;
-	width:170px;
-	padding:15px 15px 15px 0;
+  width:180px;
+  padding:15px 20px;
 	text-align:center;
 }
 
 #conts_pricetable .col4 {
 	background:url(img/fonspreu3.png) left center no-repeat #C5C5C5;
-  width:170px;
-  padding:15px 15px 15px 0;
+  width:180px;
+  padding:15px 20px;
   text-align:center;
 }
 
 #conts_pricetable .col5 {
 	background:url(img/fonspreu4.png) left center no-repeat #B1B1B1;
-  width:170px;
-  padding:15px 15px 15px 0;
+  width:180px;
+  padding:15px 20px;
   text-align:center;
 }
 
